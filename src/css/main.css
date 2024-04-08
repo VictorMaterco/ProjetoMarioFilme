@@ -1,0 +1,147 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/*estilização cabeçalho*/
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*estilização logo do cabeçalho*/
+.cabecalho .logo{
+    width: 65px;
+}
+
+/*estilização menu cabeçalho*/
+.cabecalho .menu{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/*estilização link do menu*/
+.cabecalho nav li a {
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+.cabecalho nav li a:hover {
+    background-color: #d5011d;
+}
+
+/*estização do container*/
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 132px);
+    padding: 0 30px 30px;
+}
+
+/*estilização imagem do titulo*/
+.container .imagem-titulo {
+    max-width: 500px;
+}
+
+/*estilização descrição*/
+.container .descricao{
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+/*estilização botão*/
+.container .botao-trailer {
+    background-color: #ff0021;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+}
+/*estilizando quando colocar cursor no botao*/
+.container .botao-trailer:hover {
+    transform: scale(1.1);
+    background-color: lighten(#ff0021, 10%);
+}
+
+/*estilização vídeo de fundo*/
+.fundo-video {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+/*estilização vídeo*/
+.fundo-video .video {
+    height: 100vh;
+}
+/*fazendo um frilto de fundo*/
+.fundo-video::after {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+/*estilizacao janela do trailer*/
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.749);
+    opacity: 0; 
+    visibility: hidden;
+}
+/*estilização do conteudo da janela*/
+.conteudo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;
+}
+/*estilizando botao de fechar janela*/
+.fechar-modal {
+    background-color: white;
+    color: #f03a17;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.modal iframe {
+    border-width: 0;
+    width: 640px;
+    height: 360px;
+}
+/*deixando janela visivel*/
+.modal.aberto {
+    opacity: 1;
+    visibility: visible;
+}

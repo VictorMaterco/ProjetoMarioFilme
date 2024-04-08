@@ -1,0 +1,15 @@
+/*fazendo reset geral*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*tirando estilos das linhas*/
+ul{
+    list-style: none;
+}
+
+/*tirando decoração de links textos*/
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Linkando font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!--Colocando icone no titulo da aba no navegador-->
+    <link rel="shortcut icon" href="src/imagens/favicon.ico" type="image/x-icon" />
+    <title>Super Mario Bros - O Filme</title>
+
+<!--Linkando CSS-->
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+</head>
+<body>
+    <!--Colocando video de fundo-->
+    <div class="fundo-video"> <!--criando div do video-->
+        <!--inserindo video em loop e mutado-->
+        <video class="video" autoplay loop muted>
+            <source src="src/video/video-mario.mp4" type="video/mp4"/>
+        </video>
+    </div>
+
+    <!--criando cabeçalho-->
+    <header class="cabecalho">
+        <!--Criando logo-->
+        <a>
+            <img class="logo" src="src/imagens/logo-chapeu-mario.png" alt="logo chapéu Mario" />
+        </a>
+        <!--Barra de navegação-->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Detalhes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Fim cabecalho-->
+    <!--Inicio Body-->
+    <main class="container">
+        <!--Começo informações -->
+        <div class="informacoes">
+            <img class="imagem-titulo" src="src/imagens/titulo.png" alt="imagem do título do filme"/>
+            <p class="descricao">Mario é um encanador junto com seu irmão Luigi. Um dia, eles vão parar no reino dos cogumelos, governado pela Princesa Peach, mas ameaçado pelo rei dos Koopas, que faz de tudo para conseguir reinar em todos os lugares.</p>
+            <button class="botao-trailer">Veja o trailer</button>
+        </div>
+        <img class="mario" src="src/imagens/super-mario-chars.png" alt="mario luigi peach e todd">
+        <!--Fim informações-->
+        <!--Janela do trailer-->
+        <div class="modal">
+            <div class="conteudo-modal">
+                <span class="fechar-modal">X</span>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Cb4WV4aXBpk" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/*alterando layout para telas menores de 1200px*/
+@media (max-width: 1200px) {
+    /*alterando for de fundo do body*/
+    body {
+        background-color: #f1291bde;
+    }
+    /*destivando video de fundo*/
+    .fundo-video {
+        display: none;
+    }
+    /*alterando posicoes dos itens*/
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        height: auto;
+    }
+    /*diminundo foto do personagens*/
+    .container .mario {
+        max-width: 50%;
+    }
+    /*colocando informações em coluna*/
+    .container .informacoes{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    /*adaptando imagem de titulo*/
+    .container .imagem-titulo {
+        max-width: 75%;
+    }
+    /*alinhando texto no centro*/
+    .container .descricao{
+        color: white;
+        text-align: center;
+    }
+    /*alterando cor de fundo do botão*/
+    .container .botao-trailer {
+        background-color: #263238;
+    }
+}
+/*alterando layout para telas menores de 500px*/
+@media (max-width: 500px) {
+    /*ajustando cabeçalho*/
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    /*ajustando botão de fechar modal*/
+    .modal .fechar-modal{
+        width: 25px;
+        line-height: 25px;
+    }
+    /*ajustando tamanho do conteudo da modal*/
+    .modal #video{
+        width: 300px;
+        height: 200px;
+    }
+}
